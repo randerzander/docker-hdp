@@ -4,7 +4,7 @@ Built and tested with the latest version of [Docker for Mac](https://docs.docker
 
 Trying this on Windows? Please [let me know](https://twitter.com/randerzander) how it works out.
 
-##Project Goals:
+## Project Goals:
 1. Provide a reusable base with which to experiment with various Hadoop versions, its ecosystem, and its configs w/o VMs
 2. Provide a pseudo-distributed Hadoop environment, because single node setups make bad assumptions about how software works in multi-node clusters.
 3. Provide an excuse to learn & play with Docker
