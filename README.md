@@ -25,7 +25,7 @@ centos              6                   cf2c3ece5e41        3 weeks ago         
 postgres            latest              7ee9d2061970        6 weeks ago         275.3 MB
 ```
 
-##Running HDP 2.5:
+## Running HDP 2.5:
 To run 3 containers (postgres, ambari-server, and a "single container HDP cluster"):
 ```
 docker-compose -f examples/compose/single-container.yml up
@@ -50,7 +50,7 @@ sh submit-blueprint.sh single-container examples/blueprints/single-container.jso
 
 There are additional blueprints for common test-beds in examples/blueprints, including Hive-LLAP and HBase-Phoenix.
 
-##Notes:
+## Notes:
 1. Ambari, Hive, and Ranger dbs have been pre-created in the postgres database running at postgres.dev. To configure them in Ambari, set Postgres as the DB type and change the Database URL to point at postgres.dev (as depicted in screenshot below) and leave everything else as the default options. The password for the dbs are all "dev":
 ![hive-setup](/screenshots/hive-setup.png?raw=true)
 2. The "node" container can be used for master, worker, or both types of services. The ambari-agent is configured to register with ambari-server.dev automatically, thus no SSH key setup is necessary. Use dn0.dev (and master0.dev if using multi-container):
@@ -59,7 +59,7 @@ There are additional blueprints for common test-beds in examples/blueprints, inc
 4. All Ambari and HDP repositories are downloaded at buildtime. The versions and URLs are specified in .env in the project's root
 5. Docker for Linux is more restrictive about "su" use, which Ambari relies on heavily, thus examples/compose/single-container.yml and multi-container.yml images are marked "privileged:true". Read up on the implications.
 
-##Helpful Hints:
+## Helpful Hints:
 If you HDFS having issues starting up/not leaving SafeMode, it's probably because docker-compose is re-using containers from a previous run.
 
 To start with fresh containers, before each run do:
