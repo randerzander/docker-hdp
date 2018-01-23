@@ -99,7 +99,6 @@ services:
      - "9995:9995"
      # Kerberos
      #- "88:88"
-     - "8443:8443"
 networks:
   dev:
     driver: bridge
