@@ -24,6 +24,7 @@ services:
     domainname: dev
     ports:
      - "8080:8080"
+     - "8440:8440"
   dn0.dev:
     build:
       context: ../../containers/node
@@ -99,7 +100,6 @@ services:
      - "9995:9995"
      # Kerberos
      #- "88:88"
-     - "8440:8440"
 networks:
   dev:
     driver: bridge
